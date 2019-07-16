@@ -1,4 +1,4 @@
-# go-bliss [![GoDoc](https://godoc.org/github.com/delthas/go-bliss?status.svg)](https://godoc.org/github.com/delthas/go-bliss)
+# go-bliss [![builds.sr.ht status](https://builds.sr.ht/~delthas/go-bliss.svg)](https://builds.sr.ht/~delthas/go-bliss?) [![GoDoc](https://godoc.org/github.com/delthas/go-bliss?status.svg)](https://godoc.org/github.com/delthas/go-bliss)
 
 Go bindings for [bliss](https://lelele.io/bliss.html) ([github](https://github.com/Polochon-street/bliss))
 
