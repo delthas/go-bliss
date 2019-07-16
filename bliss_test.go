@@ -28,30 +28,30 @@ func assertString(t *testing.T, expected string, actual string, message string) 
 }
 
 func TestAnalyze(t *testing.T) {
-	song, err := Analyze("audio/song.mp3")
+	song, err := Analyze("audio/song.flac")
 	if err != nil {
 		t.Error(err)
 	}
 	// optional Close, a runtime.SetFinalizer is set anyway
 	defer song.Close()
 
-	assertFloat(t, -1.349859, song.Force, "song force")
+	assertFloat(t, -25.165920, song.Force, "song force")
 
-	assertFloat(t, -0.110247, song.ForceVector.Tempo, "song tempo")
-	assertFloat(t, 0.197553, song.ForceVector.Amplitude, "song amplitude")
-	assertFloat(t, -1.547412, song.ForceVector.Frequency, "song frequency")
-	assertFloat(t, -1.621171, song.ForceVector.Attack, "song attack")
+	assertFloat(t, -8.945454, song.ForceVector.Tempo, "song tempo")
+	assertFloat(t, -15.029835, song.ForceVector.Amplitude, "song amplitude")
+	assertFloat(t, -10.136086, song.ForceVector.Frequency, "song frequency")
+	assertFloat(t, -15.560563, song.ForceVector.Attack, "song attack")
 
 	assertInt(t, 2, song.Channels, "song channels")
-	assertInt(t, 12508554, len(song.Samples), "song samples count")
+	assertInt(t, 488138, len(song.Samples), "song samples count")
 	assertInt(t, 22050, song.SampleRate, "song sample rate")
-	assertInt(t, 198332, song.Bitrate, "song bitrate")
+	assertInt(t, 233864, song.Bitrate, "song bitrate")
 	assertInt(t, 2, song.BytesPerSample, "song bytes per sample")
-	assertInt(t, 283, int(song.Duration), "song duration")
+	assertInt(t, 11, int(song.Duration), "song duration")
 
 	assertString(t, "David TMX", song.Artist, "song artist")
-	assertString(t, "Lost in dreams", song.Title, "song title")
+	assertString(t, "Renaissance", song.Title, "song title")
 	assertString(t, "Renaissance", song.Album, "song album")
-	assertString(t, "14", song.TrackNumber, "song track number")
-	assertString(t, "(255)", song.Genre, "song genre")
+	assertString(t, "02", song.TrackNumber, "song track number")
+	assertString(t, "Pop", song.Genre, "song genre")
 }

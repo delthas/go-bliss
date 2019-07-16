@@ -5,7 +5,7 @@ import (
 )
 
 func ExampleAnalyze() {
-	song, err := Analyze("audio/song.mp3")
+	song, err := Analyze("audio/song.flac")
 	if err != nil {
 		fmt.Println("couldn't analyze song")
 		return
@@ -43,25 +43,25 @@ func ExampleAnalyze() {
 	fmt.Printf("Genre: %s\n", song.Genre)
 
 	// Output:
-	// Analysis for music: audio/song.mp3
-	// Force: -1.349859
-	// Force vector: (-0.110247, 0.197553, -1.547412, -1.621171)
+	// Analysis for music: audio/song.flac
+	// Force: -25.165920
+	// Force vector: (-8.945454, -15.029835, -10.136086, -15.560563)
 	// Channels: 2
-	// Number of samples: 12508554
+	// Number of samples: 488138
 	// Sample rate: 22050
-	// Bitrate: 198332
+	// Bitrate: 233864
 	// Number of bytes per sample: 2
 	// Calm or loud: Calm
-	// Duration: 283
+	// Duration: 11
 	// Artist: David TMX
-	// Title: Lost in dreams
+	// Title: Renaissance
 	// Album: Renaissance
-	// Track number: 14
-	// Genre: (255)
+	// Track number: 02
+	// Genre: Pop
 }
 
 func ExampleAnalyze_ML() {
-	song, err := Analyze("audio/song.mp3")
+	song, err := Analyze("audio/song.flac")
 	if err != nil {
 		fmt.Println("couldn't analyze song")
 		return
@@ -76,5 +76,5 @@ func ExampleAnalyze_ML() {
 		song.ForceVector.Attack)
 
 	// Output:
-	// Lost in dreams;-0.110247;0.197553;-1.547412;-1.621171
+	// Renaissance;-8.945454;-15.029835;-10.136086;-15.560563
 }
