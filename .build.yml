@@ -1,0 +1,11 @@
+image: archlinux
+packages:
+  - go
+  - fftw
+  - bliss-git
+sources:
+  - https://github.com/delthas/go-bliss.git
+tasks:
+  - build: |
+      cd go-bliss
+      go test -v .
