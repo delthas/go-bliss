@@ -22,7 +22,7 @@ The main algorithm works by outputing a vector V = (a,b,c,d) for each song. The 
 
 - [bliss introduction](https://lelele.io/bliss.html#whatis)
 - [bliss technical details](https://lelele.io/bliss.html#details), defines the meaning of tempo/amplitude/frequency/attack ratings
-- examples: [analysing a song](https://github.com/delthas/go-bliss/blob/master/analyze_example.go), [detecting the distance and cosine similarity between songs](https://github.com/delthas/go-bliss/blob/master/detect_example.go)
+- examples: [analysing a song](https://github.com/delthas/go-bliss/blob/master/analyze_example_test.go), [detecting the distance and cosine similarity between songs](https://github.com/delthas/go-bliss/blob/master/detect_example_test.go)
 - [godoc](https://godoc.org/github.com/delthas/go-bliss)
 
 ## license
